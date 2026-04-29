@@ -1,4 +1,4 @@
-name: Reusable CI
+name: CI / Validate (Lint, Format, Build)
 
 on:
   workflow_call:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   ci:
-    name: Lint & Build
+    name: Lint, Format & Build
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +31,6 @@ jobs:
 
       - name: Format Check
         run: npm run format:check
-        
+
       - name: Build
         run: npm run build
